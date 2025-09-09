@@ -72,6 +72,10 @@ export class UsersService {
 
   async updateUser(id: string, dto: UpdateUserDto): Promise<UserRto> {
     this.logger.log(`Updating user: ${id}`)
+    if (dto.password) {
+      dto.password = await hashPassword(dto.password)
+    }
+
     const updatedUser = await this.usersRepository.updateById(id, dto)
     if (!updatedUser) {
       this.logger.warn(`User not found for update: ${id}`)
