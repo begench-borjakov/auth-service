@@ -1,4 +1,3 @@
-// src/common/interceptors/http-logger.interceptor.ts
 import { CallHandler, ExecutionContext, Injectable, NestInterceptor } from '@nestjs/common'
 import { Observable, tap } from 'rxjs'
 import { AppLogger } from '../logger/logger.service'

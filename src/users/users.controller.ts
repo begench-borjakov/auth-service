@@ -17,8 +17,6 @@ import { Roles, UserRole } from 'src/auth/decorators/roles.decorator'
 import { OwnerGuard } from 'src/auth/guards/owner.guard'
 import { ParseObjectIdPipe } from 'src/common/pipes/parse-objectid.pipe'
 import { AppLogger } from 'src/common/logger/logger.service'
-
-// ✅ Swagger
 import {
   ApiTags,
   ApiBearerAuth,

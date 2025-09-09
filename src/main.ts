@@ -32,7 +32,6 @@ async function bootstrap() {
 
   app.setGlobalPrefix('api')
 
-  // ✅ Swagger конфигурация
   const config = new DocumentBuilder()
     .setTitle('Auth Service API')
     .setDescription('Документация API сервиса аутентификации')

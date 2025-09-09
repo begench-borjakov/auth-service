@@ -8,12 +8,10 @@ import { AuthModule } from './auth/auth.module'
 
 @Module({
   imports: [
-    // 🔧 Глобальные переменные из .env
     ConfigModule.forRoot({
       isGlobal: true,
     }),
 
-    //  Подключение MongoDB (асинхронно)
     MongooseModule.forRootAsync({
       imports: [ConfigModule],
       inject: [ConfigService],
@@ -22,7 +20,6 @@ import { AuthModule } from './auth/auth.module'
       }),
     }),
 
-    // 📦 Доменные модули
     UsersModule,
     RolesModule,
     AuthModule,

@@ -11,8 +11,6 @@ import { AuthTokensRto } from './rto/auth-tokens.rto'
 import { AppLogger } from 'src/common/logger/logger.service'
 import { MeRto } from './rto/me.rto'
 import { plainToInstance } from 'class-transformer'
-
-// ✅ Swagger
 import { ApiTags, ApiOperation, ApiResponse, ApiBearerAuth, ApiBody } from '@nestjs/swagger'
 
 @ApiTags('Auth')
